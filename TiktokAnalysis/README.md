@@ -2,7 +2,7 @@
 
 ## Overview
 
-Statistics can drive actions and inspire meaningful decisions. This project demonstrates how data empowers us to make better choices by leveraging the power of both descriptive and inferential statistics. 
+Statistics can drive actions and inspire meaningful decisions. This project demonstrates how data empowers us to make better choices by leveraging the power of both descriptive and inferential statistics.
 
 ## Objective
 
@@ -18,6 +18,18 @@ The primary goal of this project is to showcase how statistical analysis can be 
 
 Understanding and applying statistical methods can lead to smarter, data-driven decisions. This project serves as a practical example of how statistics can be a powerful tool for driving impactful outcomes.
 
-## Getting Started
+## The TikTok Dataset
 
-Explore the project to see how data analysis can transform raw information into actionable insights. Dive into the code and examples to learn more about the interplay between descriptive and inferential statistics.
+This TikTok dataset was used to answer the following initial question:
+
+- Is there a statistical difference in view count between verified and unverified accounts?  
+This answer will lead to the next steps in this project, which aims to investigate why this happens.
+
+## Insights💡
+
+After analyzing the data, it was found that the mean view count of non-verified accounts was much higher than that of verified accounts.  
+However, this was not enough since it could only be caused by chance. For that reason, a two-sample t-test was conducted.
+
+**The Null Hypothesis:** This difference in the mean between non-verified and verified accounts is due to chance.  
+**The Alternative Hypothesis:** This difference is actually representative of the whole population.
+
