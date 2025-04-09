@@ -28,8 +28,11 @@ This answer will lead to the next steps in this project, which aims to investiga
 ## Insights💡
 
 After analyzing the data, it was found that the mean view count of non-verified accounts was much higher than that of verified accounts.  
-However, this was not enough since it could only be caused by chance. For that reason, a two-sample t-test was conducted.
+However, this was not enough evidence since the difference could have been caused by chance. For that reason, a two-sample t-test was conducted.
 
-**The Null Hypothesis:** This difference in the mean between non-verified and verified accounts is due to chance.  
-**The Alternative Hypothesis:** This difference is actually representative of the whole population.
+**The Null Hypothesis:** The difference in the mean view counts between non-verified and verified accounts is due to chance.  
+**The Alternative Hypothesis:** The difference in the mean view counts is statistically significant and represents the entire population.
 
+**Result:**  
+There is statistical significance in the difference between non-verified and verified accounts regarding view counts.  
+With this result, we can proceed to a more in-depth analysis using regression, a more complex method that allows us to consider additional variables.
