@@ -59,5 +59,5 @@ O próximo passo deste projeto será desenvolver um modelo de Regressão Logíst
 
 Vídeos com alta probabilidade de virem de contas não verificadas podem ser automaticamente sinalizados para uma equipe de moderação, permitindo uma ação mais rápida para mitigar a disseminação de desinformação.
 
-### Resultados da Regressão
+### Resultados da Regressão (in progress)
 
