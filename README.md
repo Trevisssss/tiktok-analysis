@@ -9,7 +9,7 @@ Uma análise exploratória feita destacou que maior parte dos vídeos postados p
 
 ![Test](image-3.png)
 
-Fonte: [Meu Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)
+Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)
 
 O que gera uma preocupação com relação a veracidade de fatos na plataforma.
 
@@ -59,5 +59,5 @@ O próximo passo deste projeto será desenvolver um modelo de Regressão Logíst
 
 Vídeos com alta probabilidade de virem de contas não verificadas podem ser automaticamente sinalizados para uma equipe de moderação, permitindo uma ação mais rápida para mitigar a disseminação de desinformação.
 
-### Resultados da Regressão
+### Resultados da Regressão (in progress)
 
