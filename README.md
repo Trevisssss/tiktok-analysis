@@ -9,7 +9,7 @@ Uma análise exploratória feita destacou que maior parte dos vídeos postados p
 
 ![Test](image-3.png)
 
-Fonte: [Meu Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)
+Fonte: [Tableu EDA Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)
 
 O que gera uma preocupação com relação a veracidade de fatos na plataforma.
 
