@@ -1,19 +1,39 @@
-# Comparação do impacto entre contas verificadas e não verificadas nas visualizações de vídeos no TikTok
+# Construção de um modelo de regressão logística para previsão de contas com potencial de 
 
 ## Overview
 
-Existe uma suspeita de que contas **não verificadas** atraem mais visualizações para os posts pelo fato de postarem `claims`(alegações) que são opiniões não fundadas e não baseadas em fatos.
+Existe uma preocupação da plataforma **TikTok** sobre videos que possam espalhar informações falsas.
+Uma análise exploratória feita destacou que maior parte dos vídeos postados por contas não verificadas são categorizadas como `claim`. **Gráfico abaixo**.
 
-Uma análise exploratória feita destacou que maior parte dos vídeos postados por contas não verificadas são categorizadas como `claim`. **Análise abaixo**.
+![Claim vs Opinion in Account Status](image-1.png)
+_Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)_
+
+Uma `claim` é uma alegação, que não necessariamente possui realmente evidências, que é apresentado por alguém como um fato, podendo ser uma forma de convencer pessoas sobre algum ponto que `não necessariamente é uma verdade` o que pode ser prejudicial principalmente se esses vídeos atingirem um grande número de pessoas.
+
+O Objetivo é investigar:
+
+* Videos categorizados como claim atraem mais views?
+* Caso haja diferença, essa diferença pode ter acontecido por acaso?
+* Se a hipótese de que existe uma real diferença na quantidade de visualizações,for confirmada, como prever se um vídeo pode ser prejudicial e agir de forma mais ágil antes que haja um impacto?
+
+Segue os resultados das análises no executivo abaixo, e detalhes técnicos no final.
+
+### Executive Summary
+
+Tentando entender melhor o engajamento, segmentado pelas categorias `verified status` e `claim status`, identifiquei uma diferença notória nas visualizações para contas `não verificadas` categorizadas como `claim`. **Gráfico abaixo**.
+
+![View Count](image.png)
+
+_Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)_
 
 
-![Test](image-3.png)
+Comparando a média de visualizações entre contas verificadas e não verificadas, revelou-se também que as contas `não verificadas` apresentam maior média de visualizações, com uma diferença de `48,79%` das contas verificadas, que confirmou-se estatisticamente através de um teste de hipótese.
 
-Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)
+![View Count Mean by Account Status](Mean_View_Count.png)
 
-O que gera uma preocupação com relação a veracidade de fatos na plataforma.
+Baseado nisso as suspeitas iniciais se confirmam, de que essas contas realmente atraem um número maior de visualizações podendo gerar uma influência em potencial de forma negativa para os espectadores e consequentemente para a plataforma.
 
-O primeiro passo é analisar se existe uma diferença significativa na média de visualizações entre **contas verificadas** e **não verificadas**. Para isso, irei comparar as médias de visualizações dos dois grupos e aplicar testes estatísticos para verificar se essa diferença é estatisticamente relevante, ou seja, se não ocorreu apenas **por acaso**. Assim, poderemos entender se o status de verificação realmente poderia ser um fator que influencia o alcance dos vídeos.
+
 
 ## Detalhes Técnicos:
 
@@ -42,16 +62,6 @@ O primeiro passo é analisar se existe uma diferença significativa na média de
 * Github
 * Tableu Public (Para algumas visualizações e exploratórias como a utilizada no primeiro parágrafo)
 
-### Executive Summary
-
-A análise do conjunto de dados revelou que as contas `não verificadas` apresentam a maior média de `view_count`. Com uma diferença de `48,79%`, isso sugere um impacto considerável no total de visualizações de vídeo para esse tipo de conta.
-
-![Testttt](image-1.png)
-
-E após testar a significância estatística, obtendo um p-valor `< 0.001`, foi possível rejeitar a hipótese nula, confirmando que a diferença na média de visualizações é estatisticamente significante.
-
-Baseado nisso as suspeitas iniciais se confirmam, de que essas contas realmente atraem um número maior de visualizações podendo gerar uma influência em potencial de forma negativa para os espectadores e consequentemente para a plataforma. 
-
 
 ### Próximos Passos (Next Steps)
 
@@ -59,5 +69,12 @@ O próximo passo deste projeto será desenvolver um modelo de Regressão Logíst
 
 Vídeos com alta probabilidade de virem de contas não verificadas podem ser automaticamente sinalizados para uma equipe de moderação, permitindo uma ação mais rápida para mitigar a disseminação de desinformação.
 
-### Resultados da Regressão (in progress)
+### Resultados da Regressão
 
+Após as considerações, devemos olhar então para a coluna **_Odds_Ratio_not_verified_**
+
+A Variável `author_ban_status_banned` ou seja, uma conta que foi banida, indica um grande impacto na conta ser `não verificada` seguida pela variável `author_ban_status_under review` o que reforça a ideia de que essas contas tendem a postar vídeos de conteúdo questionável e devem ser monitoradas, de fato. Em contra partida a variável `claim_status_opinion` nos diz que quando um post se refere a uma opinião, a chance de a conta ser não verificada cai drásticamente, como suspeitado desde o início.
+
+O modelo de Regressão Logística demonstrou uma forte capacidade de cumprir o objetivo principal do projeto: identificar contas não verificadas. A performance do modelo para esta classe atingiu um recall de **83%** (também conhecido como Especificidade), provando sua eficácia em encontrar a grande maioria do público-alvo. 
+
+Este alto poder de detecção resultou em uma precisão de 64%, indicando a presença de alguns falsos alarmes, porém ainda é melhor do que uma escolha randômica que teria 50% de chances de acerto. No entanto, o F1-Score de 72% confirma que o modelo possui um desempenho geral robusto e equilibrado para esta tarefa específica, estabelecendo um excelente baseline para futuras otimizações.
