@@ -77,4 +77,11 @@ A Variável `author_ban_status_banned` ou seja, uma conta que foi banida, indica
 
 O modelo de Regressão Logística demonstrou uma forte capacidade de cumprir o objetivo principal do projeto: identificar contas não verificadas. A performance do modelo para esta classe atingiu um recall de **83%** (também conhecido como Especificidade), provando sua eficácia em encontrar a grande maioria do público-alvo. 
 
-Este alto poder de detecção resultou em uma precisão de 64%, indicando a presença de alguns falsos alarmes, porém ainda é melhor do que uma escolha randômica que teria 50% de chances de acerto. No entanto, o F1-Score de 72% confirma que o modelo possui um desempenho geral robusto e equilibrado para esta tarefa específica, estabelecendo um excelente baseline para futuras otimizações.
+Resultados do modelo:
+
+![alt text](ConfusionMatrix.png)
+
+![alt text](RegressionMetrics.png)
+
+
+Este alto poder de detecção resultou em uma precisão de 64%, indicando a presença de alguns falsos alarmes, porém ainda é melhor do que uma escolha randômica que teria 50% de chances de acerto. O F1-Score de 72% confirma que o modelo possui um desempenho geral robusto e equilibrado para esta tarefa específica, estabelecendo um excelente baseline para futuras otimizações.
