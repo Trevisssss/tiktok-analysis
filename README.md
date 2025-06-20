@@ -5,7 +5,7 @@
 Existe uma preocupação da plataforma **TikTok** sobre videos que possam espalhar informações falsas.
 Uma análise exploratória feita destacou que maior parte dos vídeos postados por contas não verificadas são categorizadas como `claim`. **Gráfico abaixo**.
 
-![Claim vs Opinion in Account Status](image-1.png)
+![Claim Status Count by Account Status](ClaimStatusCountbyAccountStatus.png)
 _Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)_
 
 Uma `claim` é uma alegação, que não necessariamente possui realmente evidências, que é apresentado por alguém como um fato, podendo ser uma forma de convencer pessoas sobre algum ponto que `não necessariamente é uma verdade` o que pode ser prejudicial principalmente se esses vídeos atingirem um grande número de pessoas.
@@ -22,7 +22,7 @@ Segue os resultados das análises no executivo abaixo, e detalhes técnicos no f
 
 Tentando entender melhor o engajamento, segmentado pelas categorias `verified status` e `claim status`, identifiquei uma diferença notória nas visualizações para contas `não verificadas` categorizadas como `claim`. **Gráfico abaixo**.
 
-![View Count](image.png)
+![View Count](ViewCountByVerifiedStatus.png)
 
 _Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)_
 
