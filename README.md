@@ -27,11 +27,13 @@ Tentando entender melhor o engajamento, segmentado pelas categorias `verified st
 _Fonte: [Tableu E.D.A Dashboard](https://public.tableau.com/app/profile/bruno5659/viz/TikTokCapstoneProject-E_D_A/Story1#1)_
 
 
-Comparando a média de visualizações entre contas verificadas e não verificadas, revelou-se também que as contas `não verificadas` apresentam maior média de visualizações, com uma diferença de `48,79%` das contas verificadas, que confirmou-se estatisticamente através de um teste de hipótese.
+Comparando a média de visualizações entre contas verificadas e não verificadas, revelou-se também que as contas `não verificadas` apresentam maior média de visualizações, com uma diferença de `48,79%` das contas verificadas, que confirmou-se **estatisticamente** através de um teste de hipótese `(t-test)`.
 
 ![View Count Mean by Account Status](Mean_View_Count.png)
 
-Baseado nisso as suspeitas iniciais se confirmam, de que essas contas realmente atraem um número maior de visualizações podendo gerar uma influência em potencial de forma negativa para os espectadores e consequentemente para a plataforma.
+Baseado nisso, as suspeitas iniciais se confirmam, de que essas contas realmente atraem um número maior de visualizações podendo gerar uma influência em potencial de forma negativa para os espectadores e consequentemente para a plataforma.
+
+O próximo passo seria construir um modelo de `machine learning` para prever se um vídeo foi postado por uma conta verificada ou não verificada, utilizando como base as métricas de engajamento e características do próprio vídeo, como a contagem de visualizações, duração e demais variáveis presentes no treinamento desse modelo apresentado.
 
 
 
@@ -59,7 +61,7 @@ Baseado nisso as suspeitas iniciais se confirmam, de que essas contas realmente 
 #### Tecnologias utilizadas
 
 * Python (Pyenv, Pandas, Numpy, Matplotlib, Seaborn, Scipy)
-* Github
+* Github (**versionamento**)
 * Tableu Public (Para algumas visualizações e exploratórias como a utilizada no primeiro parágrafo)
 
 
@@ -79,9 +81,9 @@ O modelo de Regressão Logística demonstrou uma forte capacidade de cumprir o o
 
 Resultados do modelo:
 
-![alt text](ConfusionMatrix.png)
+![Matriz](ConfusionMatrix.png)
 
-![alt text](RegressionMetrics.png)
+![Métricas](RegressionMetrics.png)
 
 
 Este alto poder de detecção resultou em uma precisão de 64%, indicando a presença de alguns falsos alarmes, porém ainda é melhor do que uma escolha randômica que teria 50% de chances de acerto. O F1-Score de 72% confirma que o modelo possui um desempenho geral robusto e equilibrado para esta tarefa específica, estabelecendo um excelente baseline para futuras otimizações.
